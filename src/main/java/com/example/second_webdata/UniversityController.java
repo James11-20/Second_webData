@@ -3,7 +3,7 @@ package com.example.second_webdata;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class HelloController {
+public class UniversityController {
     @FXML
     private Label welcomeText;
 
