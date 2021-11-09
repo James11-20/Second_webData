@@ -9,9 +9,15 @@ import java.io.IOException;
 
 public class UniversityApplication extends Application {
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage stage) {
         FXMLLoader fxmlLoader = new FXMLLoader(UniversityApplication.class.getResource("Main.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+        Scene scene =null;
+        try{
+            scene = new Scene(fxmlLoader.load(), 600, 400);
+        }
+        catch (IOException e){
+            System.out.println("Error loading FXML or exception in the controller class");
+        }
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
