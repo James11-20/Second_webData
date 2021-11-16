@@ -7,7 +7,8 @@ module com.example.second_webdata {
     requires org.kordamp.bootstrapfx.core;
     requires javafx.graphics;
     requires java.net.http;
+    requires com.google.gson;
 
-    opens com.example.second_webdata to javafx.fxml;
+    opens com.example.second_webdata to javafx.fxml, com.google.gson;
     exports com.example.second_webdata;
 }
